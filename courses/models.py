@@ -13,7 +13,7 @@ class Subject(models.Model):
         ordering = ['title']
         
     def __str__(self):
-        return f'{self.order}. {self.title}'
+        return  self.title
     
 class Course(models.Model):
     owner = models.ForeignKey(User, related_name='courses_created', on_delete=models.CASCADE)
