@@ -10,7 +10,8 @@ from django.forms.models import modelform_factory
 from django.apps import apps
 from .models import Module, Content
 from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
-
+from django.db.models import Count 
+from .models import Subject
 class CourseModuleUpdateView(TemplateResponseMixin, View):
     template_name = 'courses/manage/module/formset.html'
     course = None
